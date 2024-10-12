@@ -1,0 +1,46 @@
+2024-10-10 05:13:09,202 p=9020 u=ec2-user n=ansible | 172.31.20.148 | SUCCESS => {
+    "ansible_facts": {
+        "discovered_interpreter_python": "/usr/bin/python3.7"
+    },
+    "changed": false,
+    "ping": "pong"
+}
+2024-10-10 05:13:09,474 p=9020 u=ec2-user n=ansible | 172.31.16.242 | SUCCESS => {
+    "ansible_facts": {
+        "discovered_interpreter_python": "/usr/bin/python3"
+    },
+    "changed": false,
+    "ping": "pong"
+}
+2024-10-10 05:13:50,376 p=9095 u=ec2-user n=ansible | PLAY [all] *************************************************************************************************************
+2024-10-10 05:13:50,405 p=9095 u=ec2-user n=ansible | TASK [Gathering Facts] *************************************************************************************************
+2024-10-10 05:13:51,982 p=9095 u=ec2-user n=ansible | ok: [172.31.16.242]
+2024-10-10 05:13:52,166 p=9095 u=ec2-user n=ansible | ok: [172.31.20.148]
+2024-10-10 05:13:52,179 p=9095 u=ec2-user n=ansible | TASK [Create a file] ***************************************************************************************************
+2024-10-10 05:13:52,767 p=9095 u=ec2-user n=ansible | changed: [172.31.16.242]
+2024-10-10 05:13:52,841 p=9095 u=ec2-user n=ansible | changed: [172.31.20.148]
+2024-10-10 05:13:52,848 p=9095 u=ec2-user n=ansible | TASK [Check something] *************************************************************************************************
+2024-10-10 05:13:53,400 p=9095 u=ec2-user n=ansible | fatal: [172.31.16.242]: FAILED! => {"changed": false, "cmd": "osdlksksfs", "msg": "[Errno 2] No such file or directory: b'osdlksksfs': b'osdlksksfs'", "rc": 2, "stderr": "", "stderr_lines": [], "stdout": "", "stdout_lines": []}
+2024-10-10 05:13:53,400 p=9095 u=ec2-user n=ansible | ...ignoring
+2024-10-10 05:13:53,409 p=9095 u=ec2-user n=ansible | fatal: [172.31.20.148]: FAILED! => {"changed": false, "cmd": "osdlksksfs", "msg": "[Errno 2] No such file or directory: b'osdlksksfs': b'osdlksksfs'", "rc": 2, "stderr": "", "stderr_lines": [], "stdout": "", "stdout_lines": []}
+2024-10-10 05:13:53,409 p=9095 u=ec2-user n=ansible | ...ignoring
+2024-10-10 05:13:53,425 p=9095 u=ec2-user n=ansible | TASK [Create a directory] **********************************************************************************************
+2024-10-10 05:13:53,820 p=9095 u=ec2-user n=ansible | ok: [172.31.16.242]
+2024-10-10 05:13:53,876 p=9095 u=ec2-user n=ansible | ok: [172.31.20.148]
+2024-10-10 05:13:53,890 p=9095 u=ec2-user n=ansible | TASK [Create group] ****************************************************************************************************
+2024-10-10 05:13:54,437 p=9095 u=ec2-user n=ansible | ok: [172.31.16.242]
+2024-10-10 05:13:54,611 p=9095 u=ec2-user n=ansible | ok: [172.31.20.148]
+2024-10-10 05:13:54,617 p=9095 u=ec2-user n=ansible | TASK [Create user Shon] ************************************************************************************************
+2024-10-10 05:13:54,640 p=9095 u=ec2-user n=ansible | fatal: [172.31.20.148]: FAILED! => {"msg": "The conditional check 'ansible_os_family == \"Iphone\" or ansible_procssor_nproc > 2' failed. The error was: error while evaluating conditional (ansible_os_family == \"Iphone\" or ansible_procssor_nproc > 2): 'ansible_procssor_nproc' is undefined\n\nThe error appears to be in '/home/ec2-user/ansible-dev/play1.yaml': line 26, column 9, but may\nbe elsewhere in the file depending on the exact syntax problem.\n\nThe offending line appears to be:\n\n          state: present\n      - name: Create user Shon\n        ^ here\n"}
+2024-10-10 05:13:54,640 p=9095 u=ec2-user n=ansible | ...ignoring
+2024-10-10 05:13:54,650 p=9095 u=ec2-user n=ansible | fatal: [172.31.16.242]: FAILED! => {"msg": "The conditional check 'ansible_os_family == \"Iphone\" or ansible_procssor_nproc > 2' failed. The error was: error while evaluating conditional (ansible_os_family == \"Iphone\" or ansible_procssor_nproc > 2): 'ansible_procssor_nproc' is undefined\n\nThe error appears to be in '/home/ec2-user/ansible-dev/play1.yaml': line 26, column 9, but may\nbe elsewhere in the file depending on the exact syntax problem.\n\nThe offending line appears to be:\n\n          state: present\n      - name: Create user Shon\n        ^ here\n"}
+2024-10-10 05:13:54,650 p=9095 u=ec2-user n=ansible | ...ignoring
+2024-10-10 05:13:54,658 p=9095 u=ec2-user n=ansible | TASK [Check uptime] ****************************************************************************************************
+2024-10-10 05:13:55,049 p=9095 u=ec2-user n=ansible | changed: [172.31.16.242]
+2024-10-10 05:13:55,072 p=9095 u=ec2-user n=ansible | changed: [172.31.20.148]
+2024-10-10 05:13:55,080 p=9095 u=ec2-user n=ansible | TASK [Check the date] **************************************************************************************************
+2024-10-10 05:13:55,525 p=9095 u=ec2-user n=ansible | changed: [172.31.20.148]
+2024-10-10 05:13:55,526 p=9095 u=ec2-user n=ansible | changed: [172.31.16.242]
+2024-10-10 05:13:55,541 p=9095 u=ec2-user n=ansible | PLAY RECAP *************************************************************************************************************
+2024-10-10 05:13:55,541 p=9095 u=ec2-user n=ansible | 172.31.16.242              : ok=8    changed=3    unreachable=0    failed=0    skipped=0    rescued=0    ignored=2   
+2024-10-10 05:13:55,541 p=9095 u=ec2-user n=ansible | 172.31.20.148              : ok=8    changed=3    unreachable=0    failed=0    skipped=0    rescued=0    ignored=2   
